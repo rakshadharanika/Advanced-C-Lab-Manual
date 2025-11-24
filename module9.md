@@ -37,7 +37,8 @@ void display() {
 
 ### Output:
 
-![alt text](img/11.png)
+<img width="292" height="507" alt="image" src="https://github.com/user-attachments/assets/b5a2357f-8acb-461a-8c06-f808d45b417d" />
+
 
 ### Result:
 Thus, the program to display stack elements using an array is verified successfully.
@@ -75,7 +76,8 @@ void push(float val) {
 
 ### Output:
 
-![alt text](img/12.png)
+<img width="569" height="483" alt="image" src="https://github.com/user-attachments/assets/06f0116e-20b4-4886-bc49-0d1c139d9c96" />
+
 
 ### Result:
 Thus, the program to push the given element in to a stack using array is verified successfully
@@ -119,7 +121,8 @@ void display() {
 
 ### Output:
 
-![alt text](img/13.png)
+<img width="621" height="507" alt="image" src="https://github.com/user-attachments/assets/eec98d59-0039-46e6-b8f2-c413e2274151" />
+
 
 ### Result:
 Thus, the program to display queue elements using array is verified successfully.
@@ -164,7 +167,8 @@ void enqueue(float val) {
 
 ### Output:
 
-![alt text](img/14.png)
+<img width="705" height="376" alt="image" src="https://github.com/user-attachments/assets/b72653c8-98a8-4696-854a-a5535a0fd404" />
+
 
 ### Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -218,7 +222,8 @@ void dequeue() {
 
 ### Output:
 
-![alt text](img/15.png)
+<img width="789" height="682" alt="image" src="https://github.com/user-attachments/assets/d0c67dfa-2a50-44e9-aa36-106aa182034f" />
+
 
 ### Result:
 Thus, the function that deletes an element from a queue implemented using an array is verified successfully.
