@@ -39,7 +39,8 @@ void display()
 
 ### Output:
 
- ![alt text](img/26.png)
+ <img width="211" height="276" alt="image" src="https://github.com/user-attachments/assets/c80d4dff-106c-4b39-9dd0-232e50f06800" />
+
 
 ### Result:
 Thus, the program to display stack elements using linked list is verified successfully. 
@@ -83,7 +84,8 @@ void pop()
 
 ### Output:
 
-![alt text](img/27.png)
+<img width="647" height="458" alt="image" src="https://github.com/user-attachments/assets/47f03061-d6c0-43ca-af74-7d31dfdbb05a" />
+
 
 
 ### Result:
@@ -131,7 +133,8 @@ void display()
 
 ### Output:
 
-![alt text](img/28.png)
+<img width="404" height="432" alt="image" src="https://github.com/user-attachments/assets/50e32d0a-87ba-421b-9ca0-10e151e0c248" />
+
 
 ### Result:
 Thus, the program to display queue elements using linked list is verified successfully.
@@ -182,7 +185,8 @@ void enqueue(int data)
 
 ### Output:
 
-![alt text](img/29.png)
+<img width="409" height="432" alt="image" src="https://github.com/user-attachments/assets/de98b9f8-a600-43e0-b8d6-c206aaf1b6c3" />
+
 
 ### Result:
 Thus, the program to insert elements in queue using linked list is verified successfully.
@@ -223,7 +227,8 @@ void peek()
 
 ### Output:
 
-![alt text](img/30.png)
+<img width="507" height="601" alt="image" src="https://github.com/user-attachments/assets/1dc55357-ca68-491f-aa20-dfa887568133" />
+
 
 ### Result:
 
