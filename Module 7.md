@@ -15,13 +15,35 @@ Else
 6.	Return 0
  
 Program:
+```
+#include<stdio.h>
 
-//type your code here
+typedef struct{
+    int age;
+    char name[20];
+}detail;
 
+int main()
+{
+    detail stu;
+    scanf("%d%s",&stu.age,stu.name);
+    
+    printf("Age:%d\nName:%s\n",stu.age,stu.name);
+    
+    if (stu.age>18){
+        printf("eligibility:yes");
+    }
+    else{
+        printf("eligibility:no");
+    }
+}
 
+```
 Output:
 
-//paste your output here
+<img width="1262" height="271" alt="image" src="https://github.com/user-attachments/assets/2871ebbf-592b-4910-b187-58a1bd4b96bc" />
+
+
 
 
 Result:
@@ -44,15 +66,41 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include<stdio.h>
+
+struct number{
+    int x;
+    int y;
+};
+
+struct res {
+    int sum;
+};
+struct res add(struct number n){
+    struct res r;
+        r.sum=n.x+n.y;
+        return r;
+}
+int main(){
+    struct number in;
+    struct res out;
+    
+    scanf("%d%d",&in.x,&in.y);
+    out=add(in);
+    
+    printf("%d",out.sum);
+}
+```
 
 
 
 
 Output:
 
+<img width="1242" height="301" alt="image" src="https://github.com/user-attachments/assets/79f8e0ec-7615-4cf7-9099-37c2c802b93c" />
 
-//paste your output here
+
 
 
 
@@ -85,16 +133,36 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
+```
+#include <stdio.h>
+int main(){
+    FILE *fp;
+    
+    fp=fopen("Staff.txt","w");
+    
+    if (fp == NULL){
+        printf("Error\n");
+        return 1;
+    }
+    
+    printf("File Created Successfully\n");
+    printf("File Opened\n");
+    
+    fclose(fp);
+    
+    printf("File Closed\n");
+    
+    return 0;
+}
 
-//type your code here
-
-
+```
 
 
 Output:
 
+<img width="1278" height="198" alt="image" src="https://github.com/user-attachments/assets/07a4d6fe-98a0-4f2a-b44b-7bd35a33f2af" />
 
-//paste your output here
+
 
 
 
@@ -133,7 +201,37 @@ Use scanf to input the file name into the name array and the number of strings i
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+int main(){
+    char file[20];
+    int n;
+    char data[30];
+    
+    scanf("%s%d",file,&n);
+    
+    FILE *fp;
+    
+    fp=fopen(file,"w");
+    
+    if (fp==NULL){
+        printf("Error\n");
+        return 1;
+    }
+    
+    getchar();
+    
+    for(int i=0;i<n;i++){
+        fgets(data,sizeof(data),stdin);
+        fputs(data,fp);
+    }
+    
+    printf("%s Opened\n",file);
+    printf("Data added Successfully");
+    
+    return 0;
+}
+```
 
 
 
@@ -141,7 +239,8 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="1269" height="343" alt="image" src="https://github.com/user-attachments/assets/6cb9c21f-647d-482e-8e30-2eccd66fabdc" />
+
 
 
 
@@ -187,7 +286,39 @@ Algorithm:
 
 Program:
 
-//type your code here
+```
+#include<stdio.h>
+struct student{
+    int reg;
+    char name[20];
+    float jun;
+    float jul;
+    float aug;
+    float sep;
+};
+int main()
+{
+    struct student det;
+    float total;
+    float avg;
+    
+    scanf("%d%s%f%f%f%f",&det.reg,det.name,&det.jun,&det.jul,&det.aug,&det.sep);
+    
+    total = det.jun+det.jul+det.aug+det.sep;
+    avg=total*100/84;
+    
+    printf("Reg.no:%d\n",det.reg);
+    printf("Name:%s\n",det.name);
+    printf("Total.No.of.present days:%.0f\n",total);
+    printf("Attendence:%.2f\n",avg);
+    
+    if(avg>75){
+        printf("eligibility:yes");
+    }else{
+        printf("eligibility:no");
+    }
+}
+```
 
 
 
@@ -195,7 +326,8 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="1256" height="415" alt="image" src="https://github.com/user-attachments/assets/192ca166-6339-44a6-abf8-ff8484900098" />
+
 
 
 
