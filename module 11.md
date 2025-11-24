@@ -12,10 +12,28 @@ Algorithm:
 5.	Call the max_of_four function with the input integers and store the result in the greater variable
  
 Program:
-//type your code here
+
+```
+#include<stdio.h>
+int max(int x, int y)
+{
+    return (x>y)?x:y;
+}
+int max_of_four(int a, int b, int c, int d)
+{
+    return max(max(a,b),max(c,d));  
+}
+int main(){
+    int a,b,c,d;
+    scanf("%d%d%d%d",&a,&b,&c,&d);
+    printf("%d",max_of_four(a,b,c,d));
+}
+```
 
 Output:
-//paste your output here
+
+<img width="1261" height="358" alt="image" src="https://github.com/user-attachments/assets/0c937d04-496c-4999-b489-a795b1a77c80" />
+
 
 Result:
 Thus, the program  that create a function to find the greatest number is verified successfully.
@@ -36,10 +54,39 @@ Algorithm:
 7.	Call the calculate_the_max function with input values.
  
 Program:
-//type your code here
+
+```
+#include<stdio.h>
+
+void calculate_the_maximum(int x,int y){
+    int max_and =0,max_or=0,max_xor=0;
+    
+    for(int i=1;i<=x;i++){
+        for(int j=i+1;j<=x;j++){
+            int andv =i&j;
+            int orv=i|j;
+            int xorv=i^j;
+            
+            
+            if(andv < y && max_and < andv) max_and=andv;
+            if(orv < y && max_or < orv) max_or=orv;
+            if(xorv < y && max_xor <xorv) max_xor=xorv;
+        }
+    }
+    printf("%d\n%d\n%d",max_and,max_or,max_xor);
+}
+int main(){
+    int a,b;
+    scanf("%d%d",&a,&b);
+    calculate_the_maximum(a,b);
+    return 0;
+}
+```
 
 Output:
-//paste your output here
+
+<img width="1261" height="383" alt="image" src="https://github.com/user-attachments/assets/9a7f7afc-0e3b-4d72-a004-d78b6340474a" />
+
 
 Result:
 Thus, the program to print the maximum values for the AND, OR and XOR comparisons
@@ -59,10 +106,62 @@ Algorithm:
 5.	Use a for loop to iterate over the queries.
  
 Program:
-//type your code here
+
+```
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    
+    int t,q;
+    scanf("%d%d",&t,&q);
+    
+    int **s=(int **)malloc(t*sizeof(int *));
+    int *bc=(int *)malloc(t*sizeof(int));
+    
+    for(int i=0;i<t;i++){
+        s[i]=NULL;
+        bc[i]=0;
+    }
+    
+    for(int i=0;i<q;i++){
+        int que;
+        scanf("%d",&que);
+        
+        if(que==1){
+            int x,y;
+            scanf("%d%d",&x,&y);
+            
+            s[x]=(int *)realloc(s[x],(bc[x]+1)*sizeof(int));
+            s[x][bc[x]]=y;
+            bc[x]++;
+        }   
+            
+        if(que==2){
+            int x,y;
+            scanf("%d%d",&x,&y);
+            printf("%d\n",s[x][y]);
+        }
+        
+        if(que==3){
+            int x;
+            scanf("%d",&x);
+            printf("%d\n",bc[x]);
+        }
+    }
+    for(int i=0;i<t;i++){
+        free(s[i]);
+    }
+    
+    free(s);
+    free(bc);
+}
+```
 
 Output:
-//paste your output here
+
+<img width="1271" height="279" alt="image" src="https://github.com/user-attachments/assets/f43c9744-b814-49b1-b809-cb8a2d907b07" />
+
 
 
 Result:
@@ -86,10 +185,29 @@ Algorithm:
 
 
 Program:
-//type your code here
+
+```
+#include<stdio.h>
+
+void TOTDET(int a,int b,int c,int d,int e){
+    
+    float tot=a+b+c+d+e;
+    float avg=tot/5;
+    float per=(tot*100)/500;
+    
+    printf("%.6f\n%.6f\n%.6f",tot,avg,per);
+}
+int main(){
+    int a,b,c,d,e;
+    scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
+    TOTDET(a,b,c,d,e);
+}
+```
 
 Output:
-//paste your output here
+
+<img width="1266" height="263" alt="image" src="https://github.com/user-attachments/assets/0691553c-22b3-4116-95a3-295e3b8a6144" />
+
 
  
 
@@ -120,10 +238,37 @@ o	If a character is not a space, it may belong to a word. If it's the first non-
 
 
 Program:
-//type your code here
+
+```
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[200];
+    int count = 0, i;
+
+    printf("Enter a sentence: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if ((i == 0 && str[i] != ' ') || 
+            (str[i] != ' ' && str[i-1] == ' ')) {
+            count++;
+        }
+    }
+
+    printf("Number of words: %d\n", count);
+    return 0;
+}
+
+```
 
 Output:
-//paste your output here
+
+<img width="1665" height="675" alt="image" src="https://github.com/user-attachments/assets/96f6a7f3-9b31-4dbd-959a-9ab7812e53a9" />
+
+
+
 
 
 
